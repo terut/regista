@@ -8,7 +8,8 @@ module Regista
     end
 
     def call(env)
-      if env['PATH_INFO'] == @options[:path]
+      req = Rack::Request.new(env)
+      if req.path == "/ul"
         [200, {'Content-Type' => 'text/plain'}, ["Regista"]]
       else
         @app.call(env)
