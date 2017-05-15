@@ -1,5 +1,7 @@
+require 'rack'
+
 require "regista/version"
+require "regista/dispatcher"
 
 module Regista
-  # Your code goes here...
 end
