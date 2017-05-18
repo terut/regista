@@ -2,6 +2,7 @@ require 'rack'
 
 require "regista/version"
 require "regista/dispatcher"
+require "regista/app"
 
 module Regista
   def self.root
@@ -9,6 +10,6 @@ module Regista
   end
 
   def self.views
-    @views ||= Pathname.new("#{root}/app/views/regista").freeze
+    @views ||= Pathname.new("#{root}/app/views").freeze
   end
 end

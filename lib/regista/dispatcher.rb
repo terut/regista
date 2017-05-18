@@ -3,26 +3,23 @@ module Regista
     def initialize(app, options = {})
       @app = app
       @options = {
-        path: '/ul'
+        path: "/ul"
       }.merge(options)
     end
 
     def call(env)
       req = Rack::Request.new(env)
-      if req.path == "/ul"
-        @title = "Regista"
-        [200, {'Content-Type' => 'text/plain'}, [erb]]
+      if req.path == options[:path]
+        App.new.call(env)
       else
         @app.call(env)
       end
     end
 
-    def erb
-      ERB.new(File.read "#{Regista.views}/index.html.erb").result(binding)
-    end
+    private
 
-    #def render
-    #  ERB.new(File.read(layout)).src
-    #end
+      def options
+        @options
+      end
   end
 end
