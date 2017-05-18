@@ -2,7 +2,7 @@ module Regista
   class App
     def call(env)
       req = Rack::Request.new(env)
-      @title = "Regista"
+      @resource = Resource::Null.find(nil, {})
       render
     end
 

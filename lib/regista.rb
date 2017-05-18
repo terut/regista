@@ -3,6 +3,8 @@ require 'rack'
 require "regista/version"
 require "regista/dispatcher"
 require "regista/app"
+require "regista/resource"
+require "regista/errors"
 
 module Regista
   def self.root
