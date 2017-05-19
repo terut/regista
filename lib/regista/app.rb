@@ -9,7 +9,7 @@ module Regista
     private
 
       def render
-        [200, {'Content-Type' => 'text/plain'}, [erb]]
+        [200, {'Content-Type' => 'text/html'}, [erb]]
       end
 
       def erb

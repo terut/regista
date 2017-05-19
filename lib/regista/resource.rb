@@ -41,7 +41,7 @@ module Regista
 
     class Null < Base
       def self.fetch(action, params)
-        { title: "Regista" }
+        { title: "Regista", image: "https://placehold.it/740x640" }
       end
     end
   end
