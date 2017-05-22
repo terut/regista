@@ -7,4 +7,7 @@ module Regista
 
   class ResourceInvalid < ResourceError
   end
+
+  class ResourceNotFound < ResourceError
+  end
 end
