@@ -31,7 +31,7 @@ module Regista
       end
 
       def validate!
-        raise Regista::ResourceInvalid if blank?(title)
+        raise ResourceInvalid if blank?(title)
       end
 
       def blank?(val)

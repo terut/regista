@@ -9,6 +9,10 @@ class Regista::ConfigurationTest < Regista::Test
     assert_equal "/ul", Regista.config.path
   end
 
+  def test_validate
+    assert_raises(Regista::ConfigurationError) { Regista.config.validate! }
+  end
+
   class ChangedConfigurationTest < Regista::Test
     def setup
       Regista.configure do |config|
