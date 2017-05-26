@@ -1,5 +1,6 @@
 require 'rack'
 require 'erb'
+require 'uri'
 
 require "regista/version"
 require "regista/configuration"
